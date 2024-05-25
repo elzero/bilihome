@@ -23,6 +23,13 @@ body {
 input {
     /* 去掉边框 */
     border: 0 none; 
-    /* 去掉聚焦后的边框也 */
+    /* 去掉聚焦后的边框线 */
     outline-style: none;
 }
+
+/* 清除列之后的浮动 */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
