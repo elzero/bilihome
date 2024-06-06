@@ -3,6 +3,7 @@
     padding: 0;
     /* 设置 100% + padding 后防止超出 */
     box-sizing: border-box;
+    font-weight: normal;
 }
 
 ul, ol, li {
@@ -31,4 +32,9 @@ input {
     content: "";
     display: table;
     clear: both;
+}
+
+/* 兼容问题，不然底部有缝隙 */
+.img {
+    vertical-align: middle;
 }

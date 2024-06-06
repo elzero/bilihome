@@ -252,3 +252,160 @@
 .bili-channel span {
     text-align: center;
 }
+
+/* 频道右侧容器 */
+.bili-channel .right-channel-container {
+    width: 100%;
+    display: flex;
+}
+
+/* 中间频道项列表 */
+.bili-channel .channel-items__left {
+    display: grid;
+    /* 11 列均分 */
+    grid-template-columns: repeat(11, 1fr);
+    /* 列间隙 */
+    gap: 10px;
+    width: 100%;
+}
+
+.bili-channel .channel-items__left a {
+    height: 26px;
+    line-height: 26px;
+    background-color: #f6f7f8;
+    border: 1px solid #f1f2f3;
+    border-radius: 6px;
+    text-align: center;
+    color: #61666d;
+}
+
+/* 右侧频道项列表 */
+.bili-channel .channel-items__right {
+    width: 240px;
+    display: grid;
+    /* 2行 平分 */
+    grid-template-rows: repeat(2, 1fr);
+    /* 按列来做填充 第一行1 第二行1 第一行2 以此类推 */
+    grid-auto-flow: column;
+    /* 行间隙 */
+    row-gap: 10px;
+    /* 防止被左侧 100% 挤压达不到 240px */
+    flex-shrink: 0;
+    margin-left: 30px;
+    border-left: 1px solid #e2e5e7;
+}
+
+.channel-items__right a {
+    width: 100%;
+    height: 28px;
+    /* 文字间隙增大 */
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    /* 将弹性项目对齐到容器的结束位置。具体来说，它将所有的项目放在容器的末端，而容器的开始位置会留出空白空间 */
+    justify-content: flex-end;
+}
+
+.channel-items__right svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    fill: #61666d;
+}
+
+.channel-items__right span {
+    color: #61666d;
+}
+
+/* 推荐列表 */
+.main {
+    width: 100%;
+    padding: 0 60px;
+    box-sizing: border-box;
+}
+
+.main .recommended-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.main .recommended-card .card-image {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.main .card-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-image .image-mask {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 16px 8px 6px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 38px;
+    background-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+    color: #fff;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+}
+
+.card-image .image-mask .stats-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.image-mask .stats-left .stats-item {
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+}
+
+.image-mask svg {
+    width: 18px;
+    height: 18px;
+    color: #fff;
+    margin-right: 2px;
+}
+
+/* 底部信息 */
+.card-info h3 {
+    line-height: 22px;
+    padding-right: 16px;
+    font-size: 15px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    line-break: anywhere;
+    -webkit-line-clamp: 2;
+}
+
+.info-bottom {
+    margin-top: 4px;
+    display: flex;
+    font-size: 13px;
+}
+
+.info-bottom a {
+    color: #9499a0;
+    display: flex;
+    align-items: center;
+}
+
+.info-bottom svg {
+    width: 17px;
+    height: 17px;
+    margin-right: 2px;
+}
+
+.info-bottom .info-date {
+    margin-left: 4px;
+}
