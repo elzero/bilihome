@@ -103,7 +103,7 @@
     left: 10px;
     width: 36px;
     height: 36px;
-    /* 跟上面一样，表示垂直居中 */
+    /* 跟上面 height 取相同值，表示垂直居中 */
     line-height: 36px;
     /* 正圆型边框 */
     border-radius: 50%;
@@ -111,12 +111,12 @@
     display: flex;
     /* 左右居中 */
     justify-content: center;
-    border: 2px solid #fff;
+    /* border: 2px solid #fff; */
     color: #fff;
 }
 
 .right-entry .right-entry-item {
-    min-width: 10px;
+    min-width: 50px;
     margin-left: 4px;
 }
 
@@ -140,6 +140,7 @@
     width: 90px;
     height: 34px;
     line-height: 34px;
+    /* 圆角效果 */
     border-radius: 8px;
     color: #fff;
     background-color: #fb7299;
@@ -186,6 +187,7 @@
 }
 
 .bili-banner .logo a {
+    /* 让 a 宽、高生效, 并且变成行内块 */
     position: relative;
     width: 162px;
     height: 78px;
@@ -199,4 +201,54 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(rgba(0,0,0,.4),transparent);
+}
+
+/* 频道区域 */
+.bili-channel {
+    height: 110px;
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+}
+
+.bili-channel .channel-icons {
+    display: flex;
+}
+
+.bili-channel .channel-icons a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 24px;
+}
+
+.bili-channel .icon-bg {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 6px;
+}
+
+.bili-channel .icon-bg__dynamic {
+    background-color: #ff9212;
+}
+
+.bili-channel .icon-bg__popular {
+    background-color: #f07775;
+}
+
+.bili-channel .icon-bg__channel {
+    background-color: #59ca73;
+}
+
+.bili-channel .icon-bg svg {
+    width: 25px;
+    height: 25px;
+}
+
+.bili-channel span {
+    text-align: center;
 }
